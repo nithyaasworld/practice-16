@@ -1,9 +1,9 @@
 function wordGenerator(str){
     let vowels = ['a','e','i','o','u'];
     let vowelPos = findVowelPositions(); // gives us an object like this {0: 'a', 2:'e'}
-   
     let numberOfVowels = Object.keys(vowelPos).length;
     let result = [];
+
     if(numberOfVowels === 1){
         vowels.forEach(vowel => {
             let word = str.split('');
@@ -21,7 +21,6 @@ function wordGenerator(str){
                     let word = result.split('');
                     word.splice(Number(Object.keys(vowelPos)[i]),1,vowel);
                     subResult.push(word.join('').toLowerCase());
-                    
                 })
             })
             result.push(...subResult);
