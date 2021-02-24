@@ -1,3 +1,4 @@
+//Problem Statement: https://gist.github.com/McLarenCollege/78e3e9217799be0eefd2ee6f76546f14
 function wordGenerator(str){
     let vowels = ['a','e','i','o','u'];
     let vowelPos = findVowelPositions(); // gives us an object like this {0: 'a', 2:'e'}
