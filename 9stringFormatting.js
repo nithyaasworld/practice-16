@@ -5,19 +5,20 @@
 function format(givenStr, object){
     let formatedString = givenStr; 
     for(let i in object){
-        formatedString = formatedString.replace('{' + i + '}' , object[i]);
+        let pattern = '///{' + i + '///}';
+        console.log(formatedString.match(//));
+        //formatedString = formatedString.replaceAll('{' + i + '}' , object[i]);
     }
     return formatedString;
 }
 
+// var s = 'Hello {foo} - make me a {bar}';
+// var o = {
+//   foo : 'Jack',
+//   bar : 'sandwich'
+// };
 
-var s = 'Hello {foo} - make me a {bar}';
-var o = {
-  foo : 'Jack',
-  bar : 'sandwich'
-};
-
-console.log(format(s, o)); // "Hello Jack - make me a sandwich"
+// console.log(format(s, o)); // "Hello Jack - make me a sandwich"
 
 var s = 'Hello {0} - make me a {1}';
 var a = ['Jack', 'sandwich'];
@@ -25,7 +26,14 @@ var a = ['Jack', 'sandwich'];
 console.log(format(s, a)); // "Hello Jack - make me a sandwich"
 
 
-var s = 'Hello {0} - make me a {1}';
-var a = ['Jack', '{0} sandwich'];
+// var s = 'Hello {0} - make me a {1}';
+// var a = ['Jack', '{0} sandwich'];
 
-console.log(format(s, a)); // "Hello Jack - make me a {0} sandwich"
+// console.log(format(s, a)); // "Hello Jack - make me a {0} sandwich"
+
+// var str = 'Hello {foo} - {foobar} make me a {bar}... {foo}!!?';
+// var a = { foo: 'Jack', bar: 'sandwich' };
+
+// console.log(format(str, a)); //Expected: 'Hello Jack - {foobar} make me a sandwich... Jack!!?', 
+
+//got: 'Hello Jack - {foobar} make me a sandwich... {foo}!!?'
