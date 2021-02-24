@@ -8,7 +8,10 @@ function maxRemainder(a,k){
     console.log(even);
     console.log(odd);
 
+<<<<<<< HEAD
     //Comparing the even and odd arrays
+=======
+>>>>>>> 232249de97e3ef99b8938c66868fe889daab688e
     for(let i=0; i<even.length; i++){
         for(let j=0; j<odd.length; j++){
             let modResult = (even[i] + odd[j] ) % k;
