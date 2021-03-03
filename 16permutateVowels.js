@@ -32,7 +32,7 @@ function wordGenerator(str){
     //Helper functions
     function findVowelPositions(){
         let vowelPositions = {};
-        str.split('').forEach((letter,i) => {
+        str.toLowerCase().split('').forEach((letter,i) => {
             if(vowels.includes(letter)){
                 vowelPositions[i] = letter;
             }

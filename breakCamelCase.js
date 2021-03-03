@@ -1,3 +1,4 @@
+// Problem Statement: https://gist.github.com/McLarenCollege/f6b06a9216bf3cadcdc994c83c26ba3b
 function solution(str){
     if(str[0] === str[0].toUpperCase()) return 'invalid';
     let result = [str[0]];
